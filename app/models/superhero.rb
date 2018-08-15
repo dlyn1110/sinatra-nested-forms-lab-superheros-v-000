@@ -1,4 +1,4 @@
-def SuperHero
+def Hero
 
   attr_accessor :name, :power, :bio
 
