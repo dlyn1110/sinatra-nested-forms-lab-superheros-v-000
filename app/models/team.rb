@@ -17,3 +17,4 @@ class Team
   def self.clear
     @@all = []
 end
+end
