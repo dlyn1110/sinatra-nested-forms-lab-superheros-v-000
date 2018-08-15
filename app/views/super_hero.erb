@@ -3,22 +3,10 @@
 
   <h1>Team Name: <%= @team.name %></h1>
   <h2>Team Motto: <%= @team.motto%></h1>
-  <h2>Hero 1</h1>
 
-  <p>Hero's Name: <input id="member1_name" type="text" name="team[superheroes][][name]"></p>
-  <p>Hero's Power: <input id="member1_power" type="text" name="team[superheroes][][power]"></p>
-  <p>Hero's Biography: <input id="member1_bio" type="text" name="team[superheroes][][bio]"></p>
 
-  <h2>Hero 2</h2>
-
-  <p>Hero's Name: <input id="member2_name" type="text" name="team[superheroes][][name]"></p>
-  <p>Hero's Power: <input id="member2_power" type="text" name="team[superheroes][][power]"></p>
-  <p>Hero's Biography: <input id="member2_bio" type="text" name="team[superheroes][][bio]"></p>
-
-  <h2>Hero 3</h2>
-
-  <p>Hero's Name: <input id="member3_name" type="text" name="team[superheroes][][name]"></p>
-  <p>Hero's Power: <input id="member3_power" type="text" name="team[superheroes][][power]"></p>
-  <p>Hero's Biography: <input id="member3_bio" type="text" name="team[superheroes][][bio]"></p>
-
-  <input id="Submit" type="submit" value="submit">
+    <% @superheroes.each do |superhero| %>
+  <h2>Hero Name: <%= superhero.name %></h2>
+  <p>Hero Power: <%= superhero.power %></p>
+  <p>Hero Biography: <%= superhero.biography %></p>
+  <% end %>
