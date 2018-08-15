@@ -5,9 +5,9 @@ def SuperHero
    @@all = []
 
   def initialize(params)
-    @name = args[:name]
-    @power = args[:power]
-    @bio = args[:bio]
+    @name = params[:name]
+    @power = params[:power]
+    @bio = params[:bio]
     @@all << self
   end
 
