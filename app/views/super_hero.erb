@@ -1,9 +1,8 @@
 <h1>Create a Team and Heroes!</h1>
 <form method="POST" action="/team">
 
-  <p>Team Name: <input type="text" name="team[name]"></p>
-  <p>Team Motto: <input type="text" name="team[motto]"></p>
-
+  <h1>Team Name: <%= @team.name %></h1>
+  <h2>Team Motto: <%= @team.motto%></h1>
   <h2>Hero 1</h1>
 
   <p>Hero's Name: <input id="member1_name" type="text" name="team[superheroes][][name]"></p>
