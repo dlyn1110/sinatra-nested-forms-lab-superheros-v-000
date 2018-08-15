@@ -1,16 +1,22 @@
 <h1>Create a Team and Heroes!</h1>
-<div class="team"
-<p>Team Name: <%= @team.name %></p>
-<p>Team Motto: <%= @team.motto %></p>
 
-</div>
+<form action="/teams" method="POST">
+<label for="team[name]">Team Name: <input type="text" name="team[name]" id="team[name]"></label><br>
+<label for="team[motto]">Team Motto: <input type="text" name="team[motto]" id="team[motto]"></label><br>
 
-<h1>Hero 1</h1>
-<% @superhero.each do |superhero| %>
-<div class="superheroes">
-  <h1>Hero Name: <%= superhero.name %></h1>
-  <p>Hero Power: <%= superhero.power %></p>
-  <p>Hero Biography: <%= superhero.bio %></p>
-</div>
+<h2>Hero 1</h2>
+<label for="hero_name">Hero's Name: <input type="text" name="team[heroes][][name]" id="member1_name"></label><br>
+<label for="hero_power">Hero's Power: <input type="text" name="team[heroes][][power]" id="member1_power"></label><br>
+<label for="hero_biography">Hero's bio: <input type="text" name="team[heroes][][biography]" id="member1_bio"></label><br>
 
-<%end%>
+<h2>Hero 2</h2>
+<label for="hero_name">Hero's Name: <input type="text" name="team[heroes][][name]" id="member2_name"></label><br>
+<label for="hero_power">Hero's Power: <input type="text" name="team[heroes][][power]" id="member2_power"></label><br>
+<label for="hero_biography">Hero's bio: <input type="text" name="team[heroes][][biography]" id="member2_bio"></label><br>
+
+<h2>Hero 3</h2>
+<label for="hero_name">Hero's Name: <input type="text" name="team[heroes][][name]" id="member3_name"></label><br>
+<label for="hero_power">Hero's Power: <input type="text" name="team[heroes][][power]" id="member3_power"></label><br>
+<label for="hero_biography">Hero's bio: <input type="text" name="team[heroes][][biography]" id="member3_bio"></label><br>
+<input type="submit" name="submit" id="submit">
+</form>
