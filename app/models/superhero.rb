@@ -3,8 +3,8 @@ def SuperHero
   attr_accessor :name, :power, :bio
 
    @@all = []
-   
-  def initialize(args)
+
+  def initialize(params)
     @name = args[:name]
     @power = args[:power]
     @bio = args[:bio]
